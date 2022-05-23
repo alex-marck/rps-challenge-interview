@@ -79,9 +79,11 @@ export class GameStateService {
     if (p1) p1.lastMove = moveType;
     this.playerOne.next(p1);
 
-    const moves = Object.values(Move);
-    const i = Math.floor(Math.random() * moves.length);
-    this.playerTwoMove(moves[i]);
+    if (this.playerTwo.getValue()?.isBot) {
+      const moves = Object.values(Move);
+      const i = Math.floor(Math.random() * moves.length);
+      this.playerTwoMove(moves[i]);
+    }
   }
 
   playerTwoMove(moveType: Move) {

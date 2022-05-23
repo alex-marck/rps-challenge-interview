@@ -1,0 +1,15 @@
+<form [formGroup]="startForm" (ngSubmit)="submit()">
+  <label for="player-one-name">Player One Name</label>
+  <input id="player-one-name" type="text" formControlName="playerOneName" required>
+
+  <div style="display: flex; margin-top: 1.5rem">
+    <label for="player-two-name" style="flex: 1;">Player Two Name</label>
+    <div style="display: flex">
+      <input id="player-two-bot" type="checkbox" formControlName="playerTwoBot">
+      <label class="container" for="player-two-bot" style="font-weight: 100; text-shadow: none;">Bot</label>
+    </div>
+  </div>
+  <input id="player-two-name" type="text" formControlName="playerTwoName" required>
+
+  <button type="submit">Get Started</button>
+</form>

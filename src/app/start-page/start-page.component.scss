@@ -1,0 +1,44 @@
+:host {
+  margin: 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 20px;
+}
+
+label {
+  margin-bottom: .25rem;
+  font-weight: 500;
+}
+
+button {
+  margin-top: 2.5rem;
+  transition: box-shadow 300ms;
+  background-color: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(4px);
+  border: 0;
+  border-radius: 4px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}

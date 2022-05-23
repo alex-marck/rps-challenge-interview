@@ -1,0 +1,19 @@
+<div class="main" *ngIf="!isRoundEnd">
+  <h2 *ngIf="isPlayerOneTurn">{{ playerOne?.name }} turn</h2>
+  <h2 *ngIf="!isPlayerOneTurn">{{ playerTwo?.name }} turn</h2>
+  <button (click)="move(moveTypes.Rock)">Rock</button>
+  <button (click)="move(moveTypes.Paper)">Paper</button>
+  <button (click)="move(moveTypes.Scissors)">Scissors</button>
+</div>
+<div class="done" *ngIf="isRoundEnd">
+  <h1>{{ playerWinner ? playerWinner.name + ' Wins' : 'Tie' }}</h1>
+  <h4 *ngIf="playerWinner">{{ playerWinner.name }}'s {{ playerWinner.lastMove}} won</h4>
+  <h4 *ngIf="!playerWinner">Both players selected {{ playerOne?.lastMove }}</h4>
+  <button (click)="playAgain()">Play again</button>
+</div>
+<div class="score left">
+  <span>{{ playerOne?.name }} Score: {{ playerOne?.score }}</span>
+</div>
+<div class="score right">
+  <span>{{ playerTwo?.name }} Score: {{ playerTwo?.score }}</span>
+</div>

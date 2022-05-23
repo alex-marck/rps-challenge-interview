@@ -1,0 +1,7 @@
+<div class="body">
+  <app-match-page *ngIf="gameStarted"></app-match-page>
+  <app-start-page *ngIf="!gameStarted"></app-start-page>
+  <div class="back" *ngIf="gameStarted">
+    <button (click)="restart()">Restart</button>
+  </div>
+</div>
